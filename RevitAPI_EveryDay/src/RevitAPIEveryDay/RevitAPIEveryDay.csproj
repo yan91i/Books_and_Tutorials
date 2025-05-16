@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{42C72DA9-5638-4C9B-947E-C5A75589B584}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LearnAPI</RootNamespace>
+    <AssemblyName>LearnAPI</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+    None
+  </ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdWindows, Version=3.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Chuongmep.RevitAPI.1.0.1\lib\net48\AdWindows.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="RevitAddInUtility, Version=21.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Chuongmep.RevitAPI.1.0.1\lib\net48\RevitAddInUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="RevitAPI, Version=21.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\Chuongmep.RevitAPI.1.0.1\lib\net48\RevitAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="RevitAPIIFC, Version=21.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\Chuongmep.RevitAPI.1.0.1\lib\net48\RevitAPIIFC.dll</HintPath>
+    </Reference>
+    <Reference Include="RevitAPIMacros, Version=21.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\Chuongmep.RevitAPI.1.0.1\lib\net48\RevitAPIMacros.dll</HintPath>
+    </Reference>
+    <Reference Include="RevitAPIUI, Version=21.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\Chuongmep.RevitAPI.1.0.1\lib\net48\RevitAPIUI.dll</HintPath>
+    </Reference>
+    <Reference Include="RevitAPIUIMacros, Version=21.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\Chuongmep.RevitAPI.1.0.1\lib\net48\RevitAPIUIMacros.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIFramework, Version=21.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\Chuongmep.RevitAPI.1.0.1\lib\net48\UIFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Day02\RvtDocument.cs" />
+    <Compile Include="Day03\PickElementsByRectangle.cs" />
+    <Compile Include="Day03\PickObjectsByCategories.cs" />
+    <Compile Include="Day03\PickPointFix.cs" />
+    <Compile Include="Day03\PickPoint.cs" />
+    <Compile Include="Day03\PickFace.cs" />
+    <Compile Include="Day03\SelectElementInLinked.cs" />
+    <Compile Include="Day03\Selection.cs" />
+    <Compile Include="Day03\PickObjects.cs" />
+    <Compile Include="Day03\PickObject.cs" />
+    <Compile Include="Day04\ElementFilterLstCategories.cs" />
+    <Compile Include="Day04\FilterElementCategories.cs" />
+    <Compile Include="Day04\FilterElements.cs" />
+    <Compile Include="Day04\EleLogicalOrFilter.cs" />
+    <Compile Include="Day04\PickObjContains.cs" />
+    <Compile Include="Day05\SetParameter.cs" />
+    <Compile Include="Day05\RvtTransaction.cs" />
+    <Compile Include="Day05\GetParameter.cs" />
+    <Compile Include="Day06\DeleteElement.cs" />
+    <Compile Include="Day06\RotateElement.cs" />
+    <Compile Include="Day06\MoveElement.cs" />
+    <Compile Include="Day06\ShowElement.cs" />
+    <Compile Include="Day06\ShowElementInLink.cs" />
+    <Compile Include="Day07\GetBoundingBox.cs" />
+    <Compile Include="Day07\InterSectBoundingBox.cs" />
+    <Compile Include="Day07\RayIntersect.cs" />
+    <Compile Include="Day07\CurveIntersection.cs" />
+    <Compile Include="Day08\ChangeTemplate.cs" />
+    <Compile Include="Day08\DistanceAToB.cs" />
+    <Compile Include="Day08\LearnUV.cs" />
+    <Compile Include="Day08\LearnVector.cs" />
+    <Compile Include="Day08\LearnXYZ.cs" />
+    <Compile Include="Utils\ElementUtils.cs" />
+    <Compile Include="Utils\MathUtils.cs" />
+    <Compile Include="Utils\NotificationUtils.cs" />
+    <Compile Include="Utils\PointUtils.cs" />
+    <Compile Include="Utils\RevitCommand.cs" />
+    <Compile Include="_Template.cs" />
+    <Compile Include="Day02\RvtApplication.cs" />
+    <Compile Include="Day01\HelloWord.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
